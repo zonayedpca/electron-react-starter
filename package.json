@@ -1,0 +1,46 @@
+{
+  "name": "electron-react-starter",
+  "version": "1.0.0",
+  "description": "A Simple Starter Pack for Electron with React",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "npm start --prefix client",
+    "build": "npm run build --prefix client",
+    "electron": "electron .",
+    "start": "concurrently \"npm run client\" \"npm run electron\"",
+    "pack": "npm run build && electron-builder --dir",
+    "dist": "npm run build && electron-builder"
+  },
+  "build": {
+    "appId": "electron.react.starter",
+    "mac": {
+      "category": "electron.react.starter"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zonayedpca/electron-react-starter.git"
+  },
+  "keywords": [
+    "electron",
+    "react",
+    "electron-react",
+    "electron-react-starter"
+  ],
+  "author": "Zonayed Ahmed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zonayedpca/electron-react-starter/issues"
+  },
+  "homepage": "https://github.com/zonayedpca/electron-react-starter#readme",
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "electron": "^4.1.4",
+    "electron-builder": "^20.39.0",
+    "electron-reload": "^1.4.0"
+  },
+  "dependencies": {
+    "electron-is-dev": "^1.1.0"
+  }
+}
